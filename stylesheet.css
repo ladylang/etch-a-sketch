@@ -1,0 +1,24 @@
+#mainContainer {
+    display: block;
+    text-align: center;
+    
+}
+
+#title {
+    color: red;
+}
+
+
+#buttonDiv{
+    display: block;
+    margin: 10px;
+}
+
+
+#sketchContainer {
+    display: inline-block;
+    background-color: pink;
+    border: solid red 1px;
+    width: 500px;
+    height: 500px;
+}

@@ -1,20 +1,7 @@
-const mainContainer = document.getElementById(mainContainer)
-
-const buttonContainer = document.createElement('div')
-mainContainer.appendChild(buttonContainer)
-buttonContainer.style.width='100%'
-buttonContainer.style.textAlign='center'
-
-const button = document.createElement('button')
-buttonContainer.appendChild(button)
-button.textContent='Reset'
-
-const sketchContainer = document.createElement('div')
-sketchContainer.style.backgroundColor ='pink'
-mainContainer.appendChild(sketchContainer)
 
 
-
+const button = document.getElementById('resetButton')
+const sketchContainer = document.getElementById('sketchContainer')
 
 
 let squareDivs
@@ -24,7 +11,7 @@ let grid
 function createSquares (grid) {
     let i=1
     let totalSquares=grid*grid
-    let divWidth=100/grid + '%'
+    let divWidth=500/grid + 'px' //500px is size of sketchContainer
     console.log(grid)
     console.log(totalSquares)
     console.log(divWidth)
@@ -33,7 +20,7 @@ function createSquares (grid) {
         squareDivs.style.backgroundColor='yellow' 
         squareDivs.style.display='inline-block'
         squareDivs.style.width=divWidth
-        //squareDivs.style.paddingTop=divWidth
+        squareDivs.style.height=divWidth
         squareDivs.style.color='blue'//change this color to see each block
         squareDivs.textContent=i //numbers each div
         squareDivs.addEventListener('mouseover', function(e) {
@@ -48,11 +35,9 @@ createSquares(5);
 
 
 button.addEventListener('click', function(e) {
-    grid = prompt('How many squares should each side of the grid have?')
+    let grid = prompt('How many squares should each side of the grid have?')
     createSquares(grid);
 });
-
-
 
 
 
