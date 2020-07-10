@@ -8,6 +8,21 @@ let squareDivs
 let grid
 
 
+createSquares(16);
+
+
+button.addEventListener('click', function(e) {
+    const sketchContainer = document.querySelector('#sketchContainer')
+    const squareDivs = document.querySelectorAll('.squareDivs')
+    squareDivs.forEach(squareDivs => {
+        sketchContainer.removeChild(squareDivs)
+    });
+    let grid = prompt('How many squares should each side of the grid have?')
+    createSquares(grid);
+});
+
+
+
 function createSquares (grid) {
     let i=1
     let totalSquares=grid*grid
@@ -17,12 +32,10 @@ function createSquares (grid) {
     console.log(divWidth)
     while (i<=totalSquares) {
         let squareDivs = document.createElement('div')
-        squareDivs.style.backgroundColor='yellow' 
-        squareDivs.style.display='inline-block'
+        squareDivs.classList.add('squareDivs')
         squareDivs.style.width=divWidth
         squareDivs.style.height=divWidth
-        squareDivs.style.color='blue'//change this color to see each block
-        squareDivs.textContent=i //numbers each div
+        squareDivs.textContent=i //numbers each div, formating is weird without this
         squareDivs.addEventListener('mouseover', function(e) {
             squareDivs.style.backgroundColor='blue'
             squareDivs.style.color='blue'
@@ -31,13 +44,3 @@ function createSquares (grid) {
         i++;
     };
 };
-createSquares(5);
-
-
-button.addEventListener('click', function(e) {
-    let grid = prompt('How many squares should each side of the grid have?')
-    createSquares(grid);
-});
-
-
-

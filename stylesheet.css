@@ -21,4 +21,12 @@
     border: solid red 1px;
     width: 500px;
     height: 500px;
+    margin: 0;
+}
+
+.squareDivs {
+    display: inline-block;
+    background-color: yellow;
+    color: yellow; /*change this color to see each block*/
+   
 }
