@@ -26,7 +26,7 @@ button.addEventListener('click', function(e) {
 function createSquares (grid) {
     let i=1
     let totalSquares=grid*grid
-    let divWidth=500/grid + 'px' //500px is size of sketchContainer
+    let divWidth=(500-grid)/grid + 'px' //500px is size of sketchContainer
     console.log(grid)
     console.log(totalSquares)
     console.log(divWidth)
@@ -35,7 +35,6 @@ function createSquares (grid) {
         squareDivs.classList.add('squareDivs')
         squareDivs.style.width=divWidth
         squareDivs.style.height=divWidth
-        squareDivs.textContent=i //numbers each div, formating is weird without this
         squareDivs.addEventListener('mouseover', function(e) {
             squareDivs.style.backgroundColor='blue'
             squareDivs.style.color='blue'

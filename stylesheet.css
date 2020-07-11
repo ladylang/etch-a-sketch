@@ -1,6 +1,14 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+
 #mainContainer {
     display: block;
     text-align: center;
+    padding: 0px;
+    margin: 0px;
     
 }
 
@@ -17,16 +25,19 @@
 
 #sketchContainer {
     display: inline-block;
-    background-color: pink;
-    border: solid red 1px;
+    border: solid red 5px;
     width: 500px;
     height: 500px;
-    margin: 0;
+    margin: 0px;
+    padding: 0px
 }
 
 .squareDivs {
-    display: inline-block;
+    display: block;
+    float:left;
     background-color: yellow;
     color: yellow; /*change this color to see each block*/
-   
+    border: solid black .5px;
+    padding: 0px;
+    margin: 0px;
 }
