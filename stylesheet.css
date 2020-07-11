@@ -1,14 +1,8 @@
-html {
-    margin: 0px;
-    padding: 0px;
-}
-
 
 #mainContainer {
     display: block;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+
     
 }
 
@@ -28,8 +22,9 @@ html {
     border: solid red 5px;
     width: 500px;
     height: 500px;
-    margin: 0px;
-    padding: 0px
+    margin-top: 25px;
+    margin-bottom: 100px;
+
 }
 
 .squareDivs {
@@ -38,6 +33,29 @@ html {
     background-color: yellow;
     color: yellow; /*change this color to see each block*/
     border: solid black .5px;
-    padding: 0px;
-    margin: 0px;
+
+}
+
+#footer {
+    display: block; 
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: rgb(247, 125, 210);
+
+}
+
+a{
+    text-decoration: none;
+    color:rgb(247, 125, 210);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    margin:0;
 }
